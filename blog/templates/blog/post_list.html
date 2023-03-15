@@ -5,14 +5,14 @@
     </head>
     <body>
         <header>
-            <h1><a href="/">BlogIt</a></h1>
+            <h1><a>BlogIt</a></h1>
         </header>
         <br>
         <br>
         {% for post in posts %}
             <article>
                 <time>published: {{ post.published_date }}</time>
-                <h2><a href="">{{ post.title }}</a></h2>
+                <h2><a>{{ post.title }}</a></h2>
                 <p>{{ post.text|linebreaksbr }}</p>
             </article>
         {% endfor %}
