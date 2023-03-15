@@ -9,7 +9,16 @@
         </header>
         <br>
         <br>
-        <article>
+        {% for post in posts %}
+            <article>
+                <time>published: {{ post.published_date }}</time>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+
+
+        <!-- <article>
             
             <h2><a href="">My first post</a></h2>
             <time>Published: 13.03.2023, 10:20</time>
@@ -22,6 +31,8 @@
             <h2><a href="">My second post</a></h2>
             <time>Published: 13.03.2023, 10:53</time>
             <p>Hey there! This is my second post!</p>
-        </article>
+
+            
+        </article> -->
     </body>
 </html>
